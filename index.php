@@ -2,19 +2,7 @@
 	include 'upload.php';
 	if (!empty($_POST['submit'])) {
 		$upl = new up;
-
-		$config = array(
-			'name' => 'upl' ,
-			'maxsize' => '5' ,
-			'ext' => 'jpg|png' ,
-			'path' => 'uploads/' ,
-			'resize_width' => '300' ,
-			'resize_height' => '100' ,
-			'thumb_width' => '200' ,
-			'thumb_height' => '350' ,
-		);
-		$upl->upload($config)->resize()->thumb();
-		// $upl->upload('upl', '5', 'jpg', 'uploads/')->resize(200,200);
+		$upl->upload('upl', '5', 'jpg', 'uploads/')->resize(200,200);
 	}
 	/**
 	Readme
